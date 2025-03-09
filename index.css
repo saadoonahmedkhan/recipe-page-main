@@ -1,0 +1,145 @@
+@import url("(https://fonts.google.com/specimen/Young+Serif)");
+@import url("https://fonts.google.com/specimen/Outfit");
+/* General Styles */
+html {
+  overflow-x: hidden;
+}
+body {
+  background-color: hsl(30, 54%, 90%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Outfit", sans-serif;
+}
+/* Project Styles */
+main {
+  background-color: white;
+  text-align: left;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+table {
+  width: 100%;
+  margin-top: 2rem;
+  border-collapse: collapse;
+  empty-cells: show;
+}
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+h1 {
+  color: hsl(14, 45%, 36%);
+  font-family: "young serif", serif;
+}
+b {
+  color: black;
+}
+ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  text-indent: 10px;
+}
+span {
+  display: inline-block;
+  color: hsl(332, 51%, 32%);
+  font-size: large;
+  font-weight: bolder;
+  transform: translateX(-10rem);
+}
+/* Specific Styles */
+figcaption:not(:last-child) {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+}
+li:not(:last-child) h1 {
+  transform: translateX(1rem);
+}
+li,
+tr {
+  margin-bottom: 1rem;
+}
+table tr:not(:last-child) {
+  width: 100%;
+  border-bottom: 1px hsl(30, 18%, 87%) solid;
+  padding: 10px;
+}
+table tr:last-child {
+  transform: translateX(1rem);
+}
+/* Utility Classes */
+.nowrap {
+  white-space: nowrap;
+}
+.title {
+  color: black;
+}
+/* Css Classes */
+.recipe {
+  list-style-type: none;
+  transform: translateX(-3rem);
+}
+.main-li:not(:last-child) {
+  transform: translateX(-10px);
+}
+.main-li:not(:nth-child(1), :nth-child(4))::after {
+  content: "";
+  display: block;
+  z-index: 2;
+  border-bottom: 1px hsl(30, 18%, 87%) solid;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+  transform: translateY(1rem);
+}
+.last-lis {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.colored {
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(330, 100%, 98%);
+  color: hsl(332, 51%, 32%);
+}
+.colored h1 {
+  font-size: 1rem;
+}
+/* Media Queries For responsive Design */
+@media screen and (min-width: 600px){
+  main {
+    height: auto;
+    width:auto;
+  }
+  .nowrap{
+    white-space: nowrap;
+  }
+}
+/* Mobiles */
+@media screen and (min-width: 320px){
+  main {
+    height: auto;
+    width:90%;
+  }
+  span{
+    text-align: left;
+  }
+  .nowrap{
+    white-space: normal;
+  }
+  .colored{
+    height:100%;
+    width:100%;
+    line-height:1.5rem;
+  }
+  .colored h1{
+    line-height:90%;
+    background-color: transparent;
+    }
+}
